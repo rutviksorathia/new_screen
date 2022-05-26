@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter/src/rendering/box.dart';
@@ -45,7 +47,7 @@ class MyApp extends StatelessWidget {
                             child: Text(
                               'Welcom back to Investup.',
                               style: TextStyle(
-                                color: Colors.white,
+                                color: Colors.white54,
                                 fontSize: 15,
                               ),
                             ),
@@ -82,7 +84,7 @@ class MyApp extends StatelessWidget {
                             child: Text(
                               'My portfolio',
                               style: TextStyle(
-                                color: Colors.white,
+                                color: Colors.white60,
                                 fontSize: 15,
                               ),
                             ),
@@ -182,7 +184,7 @@ class MyApp extends StatelessWidget {
                         child: Text(
                           'Savings',
                           style: TextStyle(
-                            color: Colors.white,
+                            color: Colors.white54,
                             fontSize: 15,
                           ),
                         ),
@@ -247,7 +249,7 @@ class MyApp extends StatelessWidget {
                                 Container(
                                     height: 30,
                                     width: 30,
-                                    margin: EdgeInsets.only(left: 25, top: 17),
+                                    margin: EdgeInsets.only(left: 15, top: 17),
                                     decoration: BoxDecoration(
                                       color: Colors.white,
                                       borderRadius:
@@ -270,7 +272,7 @@ class MyApp extends StatelessWidget {
                               child: Text(
                                 'Per Day',
                                 style: TextStyle(
-                                    fontSize: 19, color: Colors.white),
+                                    fontSize: 16, color: Colors.white70),
                               ),
                             )
                           ],
@@ -299,7 +301,7 @@ class MyApp extends StatelessWidget {
                                   ),
                                   color: Colors.grey,
                                   child: Text(
-                                    '\$ 20.90',
+                                    '\$ 420.80',
                                     style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 20,
@@ -309,7 +311,7 @@ class MyApp extends StatelessWidget {
                                 Container(
                                     height: 30,
                                     width: 30,
-                                    margin: EdgeInsets.only(left: 25, top: 17),
+                                    margin: EdgeInsets.only(left: 15, top: 17),
                                     decoration: BoxDecoration(
                                       color: Colors.white,
                                       borderRadius:
@@ -330,9 +332,9 @@ class MyApp extends StatelessWidget {
                               margin: EdgeInsets.only(left: 10),
                               color: Colors.grey,
                               child: Text(
-                                'Per Day',
+                                'All Time High',
                                 style: TextStyle(
-                                    fontSize: 19, color: Colors.white),
+                                    fontSize: 16, color: Colors.white70),
                               ),
                             )
                           ],
@@ -342,6 +344,399 @@ class MyApp extends StatelessWidget {
                   )
                 ],
               ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(
+                top: 23,
+              ),
+            ),
+            Row(
+              children: [
+                Container(
+                  height: 22,
+                  width: 100,
+                  color: Colors.white,
+                  margin: EdgeInsets.only(left: 25),
+                  child: Text(
+                    'Watchlist',
+                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+                  ),
+                ),
+                Container(
+                  height: 22,
+                  width: 90,
+                  color: Colors.white,
+                  margin: EdgeInsets.only(left: 213),
+                  child: Text(
+                    'Edit List',
+                    style: TextStyle(
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.green),
+                  ),
+                ),
+              ],
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: 20),
+            ),
+            Row(
+              children: [
+                Column(
+                  children: [
+                    Container(
+                      height: 65,
+                      width: 65,
+                      margin: EdgeInsets.only(left: 25),
+
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(60),
+                        ),
+                        border: Border.all(color: Colors.green, width: 1.5),
+                      ),
+                      // child: Image.asset(
+                      //   'accets/image/Rutvik.jpg',
+                      //   fit: BoxFit.cover,
+                      // ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(top: 10),
+                    ),
+                    Container(
+                      height: 20,
+                      width: 60,
+                      margin: EdgeInsets.only(left: 35),
+                      color: Colors.white,
+                      child: Text(
+                        'AAPL',
+                        style: TextStyle(
+                            fontSize: 17, fontWeight: FontWeight.bold),
+                      ),
+                    )
+                  ],
+                ),
+                Column(
+                  children: [
+                    Container(
+                      height: 65,
+                      width: 65,
+                      margin: EdgeInsets.only(left: 10),
+
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(60),
+                        ),
+                        border: Border.all(color: Colors.red, width: 1.5),
+                      ),
+                      // child: Image.asset(
+                      //   'accets/image/Rutvik.jpg',
+                      //   fit: BoxFit.cover,
+                      // ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(top: 10),
+                    ),
+                    Container(
+                      height: 20,
+                      width: 60,
+                      margin: EdgeInsets.only(left: 15),
+                      color: Colors.white,
+                      child: Text(
+                        'TWTR',
+                        style: TextStyle(
+                            fontSize: 17, fontWeight: FontWeight.bold),
+                      ),
+                    )
+                  ],
+                ),
+                Column(
+                  children: [
+                    Container(
+                      height: 65,
+                      width: 65,
+                      margin: EdgeInsets.only(left: 10),
+
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(60),
+                        ),
+                        border: Border.all(color: Colors.green, width: 1.5),
+                      ),
+                      // child: Image.asset(
+                      //   'accets/image/Rutvik.jpg',
+                      //   fit: BoxFit.cover,
+                      // ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(top: 10),
+                    ),
+                    Container(
+                      height: 20,
+                      width: 60,
+                      margin: EdgeInsets.only(left: 20),
+                      color: Colors.white,
+                      child: Text(
+                        'PYPL',
+                        style: TextStyle(
+                            fontSize: 17, fontWeight: FontWeight.bold),
+                      ),
+                    )
+                  ],
+                ),
+                Column(
+                  children: [
+                    Container(
+                      height: 65,
+                      width: 65,
+                      margin: EdgeInsets.only(left: 10),
+
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(60),
+                        ),
+                        border: Border.all(color: Colors.red, width: 1.5),
+                      ),
+                      // child: Image.asset(
+                      //   'accets/image/Rutvik.jpg',
+                      //   fit: BoxFit.cover,
+                      // ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(top: 10),
+                    ),
+                    Container(
+                      height: 20,
+                      width: 60,
+                      margin: EdgeInsets.only(left: 20),
+                      color: Colors.white,
+                      child: Text(
+                        'SHOP',
+                        style: TextStyle(
+                            fontSize: 17, fontWeight: FontWeight.bold),
+                      ),
+                    )
+                  ],
+                ),
+                Column(
+                  children: [
+                    Container(
+                        height: 65,
+                        width: 65,
+                        margin: EdgeInsets.only(left: 5),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(60),
+                          ),
+                          border: Border.all(color: Colors.green, width: 1.5),
+                        ),
+                        child: Icon(
+                          Icons.plus_one,
+                          color: Colors.green,
+                        )),
+                    Padding(
+                      padding: EdgeInsets.only(top: 10),
+                    ),
+                    Container(
+                      height: 20,
+                      width: 60,
+                      margin: EdgeInsets.only(left: 25),
+                      color: Colors.white,
+                      child: Text(
+                        'Add',
+                        style: TextStyle(
+                            fontSize: 17, fontWeight: FontWeight.bold),
+                      ),
+                    )
+                  ],
+                ),
+              ],
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: 25),
+            ),
+            Row(
+              children: [
+                Container(
+                  height: 20,
+                  width: 105,
+                  color: Colors.white,
+                  margin: EdgeInsets.only(left: 25),
+                  child: Text(
+                    'Transaction',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+                Container(
+                  height: 20,
+                  width: 65,
+                  color: Colors.white,
+                  margin: EdgeInsets.only(left: 225),
+                  child: Text(
+                    'Sell All',
+                    style: TextStyle(
+                        color: Colors.green,
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold),
+                  ),
+                )
+              ],
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: 10),
+            ),
+            // Row(
+            //   children: [
+            //     Container(
+            //       height: 65,
+            //       width: 65,
+            //       margin: EdgeInsets.only(left: 25),
+
+            //       decoration: BoxDecoration(
+            //         color: Colors.black45,
+            //         borderRadius: BorderRadius.all(
+            //           Radius.circular(10),
+            //         ),
+            //         border: Border.all(width: 1.0, color: Colors.white38),
+            //       ),
+            //       // child: Image.asset(
+            //       //   'accets/image/Rutvik.jpg',
+            //       //   fit: BoxFit.cover,
+            //       // ),
+            //     ),
+            //     Padding(
+            //       padding: EdgeInsets.only(left: 20),
+            //     ),
+            //     Column(
+            //       children: [
+            //         Row(
+            //           children: [
+            //             Container(
+            //               height: 20,
+            //               width: 76,
+            //               color: Colors.red,
+            //               margin: EdgeInsets.only(bottom: 35),
+            //               child: Text(
+            //                 'Apple lnc. ',
+            //                 style: TextStyle(
+            //                     fontSize: 15, fontWeight: FontWeight.bold),
+            //               ),
+            //             ),
+            //             Container(
+            //               height: 20,
+            //               width: 76,
+            //               color: Colors.red,
+            //               margin: EdgeInsets.only(bottom: 35),
+            //               child: Text(
+            //                 'APPL ',
+            //                 style: TextStyle(
+            //                   fontSize: 15,
+            //                 ),
+            //               ),
+            //             ),
+            //           ],
+            //         ),
+            //       ],
+            //     ),
+            //   ],
+            // )
+            ListTile(
+              leading: Container(
+                height: 50,
+                width: 50,
+                margin: EdgeInsets.only(left: 10),
+                decoration: BoxDecoration(
+                  color: Colors.black12,
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(10),
+                  ),
+                  border: Border.all(width: 1.0, color: Colors.white38),
+                ),
+                // child: Image.asset(
+                //           'accets/image/Rutvik.jpg',
+                //           fit: BoxFit.cover,
+                //         ),
+              ),
+              title: Text(
+                'Applelnc.APPL',
+                style: TextStyle(
+                  fontSize: 17,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              subtitle: Text(
+                '120.256',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              trailing: Text('-\$18,820'),
+            ),
+            ListTile(
+              leading: Container(
+                height: 50,
+                width: 50,
+                margin: EdgeInsets.only(left: 10),
+                decoration: BoxDecoration(
+                  color: Colors.black12,
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(10),
+                  ),
+                  border: Border.all(width: 1.0, color: Colors.white38),
+                ),
+                // child: Image.asset(
+                //           'accets/image/Rutvik.jpg',
+                //           fit: BoxFit.cover,
+                //         ),
+              ),
+              title: Text(
+                'Spotify.SPOT',
+                style: TextStyle(
+                  fontSize: 17,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              subtitle: Text(
+                '10.321',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              trailing: Text('-\$4,229'),
+            ),
+            ListTile(
+              leading: Container(
+                height: 50,
+                width: 50,
+                margin: EdgeInsets.only(left: 10),
+                decoration: BoxDecoration(
+                  color: Colors.black12,
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(10),
+                  ),
+                  border: Border.all(width: 1.0, color: Colors.white70),
+                ),
+                // child: Image.asset(
+                //           'accets/image/Rutvik.jpg',
+                //           fit: BoxFit.cover,
+                //         ),
+              ),
+              title: Text(
+                'Tinder.MTCH',
+                style: TextStyle(
+                  fontSize: 17,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              subtitle: Text(
+                '8.246',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              trailing: Text('-\$2,799'),
             ),
           ],
         ),
